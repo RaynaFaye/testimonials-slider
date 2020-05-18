@@ -9,6 +9,7 @@ body {
   background-position-y: bottom;
   background-size: 80%;
 }
+/* Testimonial section */
 .testimonial {
   text-align: center;
   display: grid;
@@ -44,6 +45,31 @@ body {
 .testimonial__photo {
   width: 80%;
   height: auto;
+}
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: 50px 40px 20px;
+}
+.prev-button,
+.next-button {
+  background: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  grid-row: 1;
+  display: flex;
+}
+.prev-button > *,
+.next-button > * {
+  cursor: pointer;
+}
+.prev-button {
+  grid-column: 1 / 3;
+}
+.next-button {
+  grid-column: 2 / 4;
+  justify-content: center;
 }
 /* Attribution section */
 .attribution {
