@@ -24,8 +24,9 @@ body {
 .testimonial__paragraph {
   grid-row: 4;
   font-weight: 300;
-  padding-top: 50px;
+  padding: 50px 10px 0 10px;
   align-self: center;
+  line-height: 1.5;
 }
 .testimonial__title {
   grid-row: 5;
@@ -43,6 +44,7 @@ body {
 .testimonial__image-block {
   grid-row: 1 / 4;
   padding: 20px 25px 20px 25px;
+  margin-top: 20px;
 }
 .testimonial__photo {
   width: 80%;
@@ -67,9 +69,10 @@ body {
   background-position-x: center;
   background-size: 15%;
   height: 100px;
-  padding-top: 25px;
+  padding-top: 60px;
   align-self: center;
 }
+
 /* Buttons */
 .buttons {
   grid-column: 1;
@@ -105,4 +108,68 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+/* Media queries */
+@media all and (min-width: 768px) {
+  body {
+    background: url(../images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 50%;
+  }
+  .container {
+    grid-template-rows: 25px 100px 3fr 1fr 25px 25px 25px 50px;
+    grid-template-columns: 1fr 4fr 50px 50px 110px 4fr 1fr 1fr;
+  }
+  /* Testimonial section */
+  .testimonial {
+    text-align: left;
+    grid-column: 1 / -1;
+    grid-template-rows: 25px 100px 3fr 1fr 25px 25px 25px 50px;
+    grid-template-columns: 1fr 4fr 50px 50px 110px 4fr 1fr 1fr;
+  }
+  .testimonial__paragraph {
+    grid-row: 3;
+    grid-column: 2/5;
+    font-size: 32px;
+    z-index: 2;
+    align-self: end;
+  }
+  .testimonial__title {
+    grid-column: 2;
+    grid-row: 4;
+    display: block;
+    font-size: 20px;
+  }
+
+  .testimonial__image-block {
+    grid-column: 4 / 7;
+    grid-row: 3 / 6;
+    padding: 0;
+  }
+  .testimonial__photo {
+    width: 100%;
+    height: 100%;
+  }
+  .img-back {
+    grid-row: 2 / 8;
+    grid-column: 3/-2;
+    background-size: contain;
+    background-position: bottom;
+  }
+  .text-back {
+    grid-column: 2;
+    grid-row: 3;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    padding-top: 0px;
+    margin-left: 100px;
+    margin-bottom: 175px;
+  }
+  /* Buttons */
+  .buttons {
+    grid-column: 5;
+    grid-row: 5 / 7;
+  }
 }
