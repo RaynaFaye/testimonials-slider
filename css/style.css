@@ -190,3 +190,19 @@ body {
     font-size: 32px;
   }
 }
+@media all and (max-width: 374px) {
+  .container {
+    grid-template-rows: 250px 25px 25px 1fr 100px;
+  }
+  /* Testimonial section */
+  .testimonial {
+    grid-template-rows: 250px 25px 25px 1fr 100px;
+  }
+  .testimonial__photo {
+    width: 236px;
+    height: 236px;
+  }
+  .img-back {
+    background-size: 95%;
+  }
+}
